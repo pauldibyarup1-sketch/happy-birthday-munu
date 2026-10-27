@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160b19">
+<title>Happy Birthday, My Love ❤️</title>
+<style>
+:root{--pink:#ff7eb6;--rose:#ff426f;--cream:#fff4f7;--gold:#ffd58a;--ink:#170d1b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--cream);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at 20% 10%,#552047 0,transparent 32%),radial-gradient(circle at 90% 35%,#2d2258 0,transparent 32%),linear-gradient(140deg,#100913,#241027 55%,#130d24);overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer}
+#gate{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:22px;background:linear-gradient(145deg,rgba(18,7,22,.97),rgba(63,15,48,.97));}
+.gate-card{max-width:430px;width:100%;text-align:center;padding:34px 26px;border:1px solid #ff9ac755;border-radius:26px;background:#ffffff0b;box-shadow:0 0 60px #ff4b8a18}
+.gate-card .big{font-size:3.4rem}.gate-card h1{font-size:clamp(2rem,7vw,3rem);margin:10px 0;color:#ffc4dc}.gate-card p{line-height:1.6;color:#f3dbe7}
+.gate-card input{width:100%;padding:13px 15px;border-radius:12px;border:1px solid #ff9ac777;background:#160b19;color:white;margin:10px 0 14px;text-align:center}
+.primary{border:0;border-radius:999px;padding:13px 23px;color:#2a0b1b;font-weight:bold;background:linear-gradient(100deg,#ffb2d1,#ffd98d);box-shadow:0 8px 25px #ff5e9d33}
+.small{font-size:.82rem;color:#c9b5c5}.error{color:#ff9db8;min-height:1.3em}
+header{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 20px 65px;position:relative;isolation:isolate}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;font: .76rem Arial,sans-serif;color:var(--gold)}
+h1.hero{font-size:clamp(3rem,11vw,7.2rem);line-height:.94;margin:24px 0 18px;color:#ffd2e4;text-shadow:0 0 30px #ff6ca755}
+h1.hero span{display:block;color:var(--gold);font-style:italic}
+.subtitle{max-width:650px;line-height:1.8;color:#f3dce9;font-size:1.08rem}
+.badge{border:1px solid #ffb3d455;border-radius:999px;padding:9px 16px;margin:18px 0;color:#ffd2e4;background:#ffffff08}
+.scroll{position:absolute;bottom:23px;color:#e7bfd4;font: .75rem Arial,sans-serif;letter-spacing:.2em}
+.glow{position:absolute;border-radius:50%;filter:blur(2px);opacity:.45;z-index:-1;animation:float 8s ease-in-out infinite}
+.glow.one{width:190px;height:190px;background:#ff4b8a22;left:4%;top:18%}.glow.two{width:250px;height:250px;background:#a66aff20;right:2%;bottom:12%;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-22px) translateX(12px)}}
+section{padding:76px 20px;max-width:1050px;margin:auto}
+.section-title{text-align:center;font-size:clamp(2rem,6vw,3.5rem);color:#ffd0e2;margin:0 0 12px}
+.section-intro{text-align:center;max-width:680px;line-height:1.75;color:#d9c4d4;margin:0 auto 34px}
+.card{background:linear-gradient(135deg,#ffffff0d,#ffffff05);border:1px solid #ffb4d522;border-radius:24px;padding:clamp(20px,5vw,36px);box-shadow:0 18px 50px #00000015}
+.letter{font-size:1.13rem;line-height:1.95;white-space:pre-line;color:#f8e9f0}
+.signature{font-size:1.5rem;color:var(--gold);font-style:italic;text-align:right;margin-top:22px}
+.timeline{display:grid;gap:16px;max-width:760px;margin:auto}
+.moment{display:grid;grid-template-columns:48px 1fr;gap:15px;align-items:start}
+.dot{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:#ff7eb622;border:1px solid #ff8cba66;font-size:1.25rem}
+.moment h3{margin:3px 0 7px;color:#ffd0e2}.moment p{margin:0;color:#d9c4d4;line-height:1.7}
+.photo-tools{text-align:center;margin-bottom:22px}.photo-tools input{max-width:100%;color:#f8e9f0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+.gallery figure{margin:0;min-height:170px;border-radius:17px;overflow:hidden;background:#ffffff0b;border:1px solid #ffffff1a;display:flex;align-items:center;justify-content:center;position:relative}
+.gallery img{width:100%;height:220px;object-fit:cover;display:block}.placeholder{padding:15px;text-align:center;color:#d9c4d4;line-height:1.6}
+.gift-wrap{text-align:center}.gift{font-size:6rem;border:0;background:transparent;filter:drop-shadow(0 0 20px #ff8fba66);transition:transform .25s}.gift:hover{transform:scale(1.08) rotate(-4deg)}
+.reveal{display:none;margin:24px auto 0;max-width:650px;line-height:1.8;color:#ffe7f0}.reveal.show{display:block;animation:appear .7s ease}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.roses{text-align:center;font-size:clamp(2rem,7vw,4.5rem);letter-spacing:.06em;line-height:1.55;filter:drop-shadow(0 0 15px #ff5c9b55)}
+.rose-note{text-align:center;color:#f1d8e6;line-height:1.8;max-width:620px;margin:16px auto}
+.reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.reason{padding:14px 15px;border-radius:14px;background:#ffffff08;border:1px solid #ffffff0d;line-height:1.5;color:#f4dce8}
+.reason b{color:var(--gold);margin-right:7px}
+.cake-area{text-align:center}.cake{font-size:6rem;animation:bob 2s ease-in-out infinite;display:inline-block}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:25px 0}
+.timebox{min-width:75px;padding:15px 12px;border-radius:17px;background:#ffffff0b;border:1px solid #ffb2d333;text-align:center}
+.timebox strong{display:block;font-size:2rem;color:var(--gold)}.timebox span{font: .72rem Arial,sans-serif;color:#e2c7d8;text-transform:uppercase;letter-spacing:.1em}
+footer{text-align:center;padding:35px 18px 55px;color:#d6b9cc;line-height:1.8}
+.heart{position:fixed;bottom:-30px;pointer-events:none;z-index:5;animation:rise linear forwards;opacity:.75}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.confetti{position:fixed;top:-15px;z-index:999;pointer-events:none;animation:fall 3.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:.1}}
+hr{border:0;border-top:1px solid #ffb2d322;margin:28px 0}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="gate">
+  <div class="gate-card">
+    <div class="big">💌</div>
+    <div class="eyebrow">A tiny world made for one person</div>
+    <h1>For Munu ❤️</h1>
+    <p>This little birthday universe is waiting for you. Enter the secret word to open it.</p>
+    <form id="unlockForm">
+      <input id="password" type="password" placeholder="Enter the secret word" aria-label="Secret word" autocomplete="off">
+      <button class="primary" type="submit">Unlock my surprise ✨</button>
+    </form>
+    <div id="error" class="error" aria-live="polite"></div>
+    <p class="small">Hint: a name that belongs in this story 💗</p>
+  </div>
+</div>
+
+<header id="top">
+  <div class="glow one"></div><div class="glow two"></div>
+  <div class="eyebrow">A little universe, made just for you</div>
+  <h1 class="hero">Happy Birthday,<span>My Munu ❤️</span></h1>
+  <p class="subtitle">Aaj ka din tumhare naam. আজকের দিনটা তোমার জন্য। May your world be filled with love, laughter, and all the little things that make you smile.</p>
+  <div class="badge">29 October · Your special day 🎂</div>
+  <button class="primary" onclick="document.querySelector('#letter').scrollIntoView({behavior:'smooth'})">Open your birthday letter 💌</button>
+  <div class="scroll">SCROLL TO DISCOVER ↓</div>
+</header>
+
+<section id="letter">
+  <h2 class="section-title">A letter for you 💌</h2>
+  <p class="section-intro">Some feelings deserve more than one little message.</p>
+  <div class="card">
+    <div class="letter">Happy Birthday, Munu! ❤️
+
+Today is all about you—the beautiful person who makes ordinary moments feel special. I hope this new year of your life brings you peace, confidence, laughter, good health, and dreams that slowly become real.
+
+Tumhari smile hamesha bani rahe, aur tumhe har din yaad rahe ki tum kitni special ho. তোমার জীবনে অনেক আনন্দ, ভালোবাসা আর সুন্দর মুহূর্ত আসুক।
+
+I may not always find the perfect words, but I hope my actions remind you that you matter. Thank you for being part of my story. Keep being your lovely, unique self, and never stop believing in the wonderful things waiting for you.
+
+আজ তোমার সব ইচ্ছে একটু একটু করে সত্যি হোক। Keep smiling, keep shining, and enjoy your day to the fullest.
+
+Happy Birthday, my Munu. You deserve a day as lovely as your heart. 🎂🌹</div>
+    <div class="signature">With love, Sunu ❤️</div>
+  </div>
+</section>
+
+<section id="photos">
+  <h2 class="section-title">Our little memories 📸</h2>
+  <p class="section-intro">Choose your favourite photos below. They appear on this page in your browser—nothing is uploaded to a server.</p>
+  <div class="card">
+    <div class="photo-tools"><input id="photoInput" type="file" accept="image/*" multiple aria-label="Choose photos"></div>
+    <div class="gallery" id="gallery">
+      <figure><div class="placeholder">📷<br>Our first favourite photo goes here</div></figure>
+      <figure><div class="placeholder">💗<br>A memory that always makes us smile</div></figure>
+      <figure><div class="placeholder">🌷<br>One more moment to keep forever</div></figure>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <h2 class="section-title">Our story, our little universe 🌙</h2>
+  <p class="section-intro">Every lovely story is made of little moments. Add your own dates and memories to make this timeline yours.</p>
+  <div class="timeline">
+    <div class="moment"><div class="dot">✨</div><div><h3>The beginning</h3><p>The day our story started becoming something special. Add the date and what you remember most.</p></div></div>
+    <div class="moment"><div class="dot">😊</div><div><h3>A memory that makes me smile</h3><p>That one conversation, laugh, or small moment you wish you could relive.</p></div></div>
+    <div class="moment"><div class="dot">💞</div><div><h3>Today—and all the moments ahead</h3><p>Another chapter, another birthday, and plenty of kind memories still to make.</p></div></div>
+  </div>
+</section>
+
+<section id="gift">
+  <h2 class="section-title">A little surprise 🎁</h2>
+  <p class="section-intro">Tap the gift. Something sweet is waiting inside.</p>
+  <div class="card gift-wrap">
+    <button class="gift" id="giftButton" aria-label="Open surprise gift">🎁</button>
+    <p style="color:#e9cddd">Tap to unwrap your surprise</p>
+    <div class="reveal" id="giftReveal">
+      <div style="font-size:3rem">💖🌹✨</div>
+      <h3 style="font-size:1.8rem;color:#ffd0e2">Your surprise is this reminder…</h3>
+      <p>You don't have to be perfect to be precious. I hope you feel loved, appreciated, and celebrated—not just today, but on the ordinary days too. A virtual bouquet for my Munu! 🌹</p>
+      <div class="roses">🌹🌹🌹<br>🌹💐🌹<br>🌹🌹🌹</div>
+    </div>
+  </div>
+</section>
+
+<section id="roses">
+  <h2 class="section-title">A bouquet just for you 🌹</h2>
+  <p class="section-intro">Real flowers fade, but the thought behind them can stay.</p>
+  <div class="card">
+    <div class="roses">🌹 🌷 🌹<br>💐 🌸 💐<br>🌹 🌷 🌹</div>
+    <p class="rose-note">Munu, may your days bloom with happiness, your heart stay hopeful, and your life keep surprising you with beautiful things. তোমার প্রতিটা দিন ফুলের মতো সুন্দর হোক। ❤️</p>
+  </div>
+</section>
+
+<section id="reasons">
+  <h2 class="section-title">100 little reasons ❤️</h2>
+  <p class="section-intro">A playful list of appreciation. Change any line so it reflects what you genuinely love and admire about her.</p>
+  <div class="reasons" id="reasonList"></div>
+</section>
+
+<section id="cake">
+  <h2 class="section-title">Make a birthday wish 🎂</h2>
+  <p class="section-intro">A tiny cake, a big wish, and a whole lot of love.</p>
+  <div class="card cake-area">
+    <div class="cake" id="cakeEmoji">🎂</div>
+    <p id="cakeText" style="line-height:1.8;color:#f3dce9">Close your eyes, make a wish, and tap the button. ✨</p>
+    <button class="primary" id="wishButton">Make a wish & celebrate 🎉</button>
+  </div>
+</section>
+
+<section id="countdown">
+  <h2 class="section-title">Your special day ⏳</h2>
+  <p class="section-intro">Counting down to 29 October, the day the world got Munu.</p>
+  <div class="countdown" id="countdownBoxes">
+    <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+    <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+    <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+    <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+  </div>
+  <p id="countdownMessage" class="section-intro">Every birthday is another page in your story. Make this one beautiful. 💗</p>
+</section>
+
+<footer>
+  Made with care by Sunu, especially for Munu ❤️<br>
+  <span class="small">A tiny reminder: the password screen is a cute front-end lock, not strong security. Anyone with the site files can inspect the code.</span>
+</footer>
+
+<script>
+// Change this to your own secret word before sharing. This is only a playful browser-side lock.
+const SECRET_PASSWORD = "munu";
+document.getElementById('unlockForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if(document.getElementById('password').value.trim().toLowerCase() === SECRET_PASSWORD.toLowerCase()){
+    document.getElementById('gate').style.display='none';
+    celebrate();
+    setInterval(makeHeart, 900);
+  } else {
+    document.getElementById('error').textContent='Not quite 💗 Try the hint again.';
+  }
+});
+const reasons = [
+"Your smile can brighten a difficult day.","The way you laugh at little things.","Your unique way of seeing the world.","The kindness you show people.",
+"Your honesty.","Your courage to keep going.","The little details you remember.","Your sense of humour.","Your thoughtful messages.","The way you make moments memorable.",
+"Your curiosity.","Your dreams for the future.","Your determination.","Your soft-hearted side.","Your confidence when you believe in yourself.","Your creativity.","Your patience.","Your generosity.","Your individuality.","Your warm energy.",
+"The way you celebrate small wins.","Your love for the things you enjoy.","Your ability to learn.","Your resilience.","Your thoughtful opinions.","Your playful side.","Your beautiful imagination.","Your willingness to try again.","Your caring nature.","Your ambition.",
+"The way you notice details.","Your enthusiasm.","Your honesty with your feelings.","Your effort, even when things are hard.","Your little expressions.","Your unique style.","Your voice when you're excited.","Your sense of wonder.","Your loyalty to what matters.","Your ability to make people feel seen.",
+"Your compassion.","Your spontaneity.","Your gentle reminders.","Your determination to grow.","Your independent mind.","Your love of learning.","Your ability to surprise me.","Your sincerity.","Your strength in quiet moments.","Your hopes and plans.",
+"The way you share stories.","Your funny reactions.","Your thoughtful questions.","Your ability to be yourself.","Your willingness to care.","Your optimism on good days.","Your courage on tough days.","Your small acts of kindness.","Your perspective.","Your energy when you're happy.",
+"The way you make simple moments special.","Your expressive eyes.","Your laugh in a happy moment.","Your sense of adventure.","Your appreciation for little things.","Your effort to understand others.","Your imagination.","Your dreams, big and small.","Your gentle humour.","Your honest heart.",
+"Your ability to surprise yourself.","Your determination to improve.","Your love for your favourite things.","Your thoughtful gestures.","Your curiosity about life.","Your personal growth.","Your unique talents.","Your open-mindedness.","Your patience with learning.","Your caring words.",
+"Your ability to start fresh.","Your hope for tomorrow.","Your strength to speak up.","Your willingness to listen.","Your originality.","Your enthusiasm for new ideas.","Your little habits that make you you.","Your sense of fun.","Your thoughtfulness when it counts.","Your ability to keep trying.",
+"The memories we share.","The moments still ahead of us.","The things I keep learning about you.","The happiness you deserve.","The dreams I hope you reach.","The person you are becoming.","The fact that no one else is exactly you.","The joy of celebrating you today.","The chance to cheer you on.","Simply being Munu."
+];
+const reasonList=document.getElementById('reasonList');
+reasons.forEach((r,i)=>{const d=document.createElement('div');d.className='reason';d.innerHTML='<b>'+(i+1)+'.</b>'+r;reasonList.appendChild(d)});
+document.getElementById('giftButton').addEventListener('click',()=>{
+  document.getElementById('giftReveal').classList.toggle('show');
+  document.getElementById('giftButton').textContent=document.getElementById('giftReveal').classList.contains('show')?'💝':'🎁';
+  if(document.getElementById('giftReveal').classList.contains('show')) celebrate();
+});
+document.getElementById('wishButton').addEventListener('click',()=>{
+  document.getElementById('cakeEmoji').textContent='🎂✨🎉';
+  document.getElementById('cakeText').textContent='Wish made! May this year bring Munu many reasons to smile. Happy Birthday! 🎉 শুভ জন্মদিন! ❤️';
+  celebrate();
+});
+document.getElementById('photoInput').addEventListener('change',function(){
+  const gallery=document.getElementById('gallery');
+  gallery.innerHTML='';
+  [...this.files].forEach(file=>{
+    if(!file.type.startsWith('image/')) return;
+    const url=URL.createObjectURL(file), fig=document.createElement('figure'), img=document.createElement('img');
+    img.src=url;img.alt='A selected memory';fig.appendChild(img);gallery.appendChild(fig);
+  });
+  if(!gallery.children.length) gallery.innerHTML='<figure><div class="placeholder">Choose image files to show your memories here 💗</div></figure>';
+});
+function nextBirthday(){
+  const now=new Date(), target=new Date(now.getFullYear(),9,29,0,0,0);
+  if(target<=now) target.setFullYear(target.getFullYear()+1);
+  return target;
+}
+function updateCountdown(){
+  const now=new Date(), diff=nextBirthday()-now;
+  const d=Math.floor(diff/86400000), h=Math.floor(diff%86400000/3600000), m=Math.floor(diff%3600000/60000), s=Math.floor(diff%60000/1000);
+  document.getElementById('days').textContent=d;document.getElementById('hours').textContent=h;document.getElementById('minutes').textContent=m;document.getElementById('seconds').textContent=s;
+  document.getElementById('countdownMessage').textContent=d===0?'It is Munu’s birthday! Happy Birthday! 🎂❤️':'Counting down to the next 29 October—your day to shine. 💗';
+}
+setInterval(updateCountdown,1000);updateCountdown();
+function makeHeart(){
+  if(document.getElementById('gate').style.display!=='none') return;
+  const el=document.createElement('div');el.className='heart';el.textContent=['♥','♡','💗','✨'][Math.floor(Math.random()*4)];
+  el.style.left=Math.random()*100+'vw';el.style.fontSize=(14+Math.random()*22)+'px';el.style.color=['#ff7eb6','#ffd58a','#ffc4dc'][Math.floor(Math.random()*3)];el.style.animationDuration=(5+Math.random()*4)+'s';
+  document.body.appendChild(el);setTimeout(()=>el.remove(),9500);
+}
+function celebrate(){
+  const symbols=['💗','✨','🌹','💖','🎉','💕'];
+  for(let i=0;i<48;i++){
+    const el=document.createElement('div');el.className='confetti';el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+'vw';el.style.fontSize=(12+Math.random()*20)+'px';el.style.animationDelay=(Math.random()*.7)+'s';
+    document.body.appendChild(el);setTimeout(()=>el.remove(),4500);
+  }
+}
+</script>
+</body>
+</html>
